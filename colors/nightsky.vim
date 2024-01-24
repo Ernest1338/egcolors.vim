@@ -263,3 +263,7 @@ exe 'hi LspSignatureActiveParameter' . s:fg_yellow . ' gui=underline'
 
 "netrw
 hi! link netrwTreeBar Comment
+
+"My changes
+exe 'hi TabLine' . s:bg_bg_dim . s:fg_fg_alt
+exe 'hi TabLineSel' . ' cterm=underline ctermfg=15 ctermbg=242 gui=underline ' . s:bg_bg_alt
