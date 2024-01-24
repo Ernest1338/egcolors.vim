@@ -266,4 +266,7 @@ hi! link netrwTreeBar Comment
 
 "My changes
 exe 'hi TabLine' . s:bg_bg_dim . s:fg_fg_alt
-exe 'hi TabLineSel' . ' cterm=underline ctermfg=15 ctermbg=242 gui=underline ' . s:bg_bg_alt
+exe 'hi TabLineSel' . ' cterm=underline gui=underline ' . s:bg_bg_alt
+hi! link MiniTablineModifiedCurrent TabLineSel
+"exe 'hi MiniTablineModifiedCurrent' . s:fg_yellow . ' cterm=underline gui=underline ' . s:bg_bg_alt
+exe 'hi MiniTablineModifiedHidden' . s:bg_bg_dim . s:fg_yellow
