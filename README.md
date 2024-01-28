@@ -1,1 +1,3 @@
-a minimal vim/neovim colorscheme for glepnir may breakchange at anytime 😄
+My colorscheme
+
+Fork of https://github.com/nvimdev/nightsky.vim
