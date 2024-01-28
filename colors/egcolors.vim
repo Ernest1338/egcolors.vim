@@ -1,12 +1,12 @@
-" Name:       nightsky.vim
+" Name:       egcolors.vim
 " Version:    0.1.0
-" Maintainer: glepnir <https://github.com/glepnir>
+" Maintainer: Ernest1338 <https://github.com/Ernest1338>
 " License:    The MIT License (MIT)
 "
 " A minimal colour scheme for Vim and Neovim
 hi clear
 
-let g:colors_name = 'nightsky'
+let g:colors_name = 'egcolors'
 set background=dark
 let s:background = &background
 
@@ -270,3 +270,4 @@ exe 'hi TabLineSel' . ' cterm=underline gui=underline ' . s:bg_bg_alt
 hi! link MiniTablineModifiedCurrent TabLineSel
 "exe 'hi MiniTablineModifiedCurrent' . s:fg_yellow . ' cterm=underline gui=underline ' . s:bg_bg_alt
 exe 'hi MiniTablineModifiedHidden' . s:bg_bg_dim . s:fg_yellow
+exe 'hi MiniCursorword guifg=NONE guibg=#242831 gui=NONE cterm=NONE'
