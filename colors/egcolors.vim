@@ -115,6 +115,8 @@ exe 'hi Identifier' . s:fg_blue
 exe 'hi @variable' . s:fg_fg
 " built-in variable names (e.g. `this`)
 exe 'hi @variable.builtin' . s:fg_purple
+" function paramter (not parameter?)
+"exe 'hi @variable.paramter' . s:fg_fg
 " link to field
 exe 'hi @variable.member' . s:fg_cyan
 exe 'hi Constant' . s:fg_orange
