@@ -1,4 +1,4 @@
-" Name:       egcolors.vim
+" Name:       gruvbox.vim
 " Version:    0.1.0
 " Maintainer: Ernest1338 <https://github.com/Ernest1338>
 " License:    The MIT License (MIT)
@@ -6,26 +6,27 @@
 " A minimal colour scheme for Vim and Neovim
 hi clear
 
-let g:colors_name = 'egcolors'
+let g:colors_name = 'gruvbox'
 set background=dark
 let s:background = &background
 
 let s:p = #{
-      \  bg : '#141821',
-      \  bg_float: '#14131f',
-      \  bg_dim : '#1c202e',
-      \  bg_alt : '#222738',
-      \  fg :     '#cccccc',
-      \  fg_dim : '#989898',
+      \  bg : '#282828',
+      \  bg_float: '#282828',
+      \  bg_dim : '#3c3836',
+      \  bg_alt : '#3c3836',
+      \  bg_alt2: '#504945',
+      \  fg :     '#ebdbb2',
+      \  fg_dim : '#ebdbb2',
       \  fg_alt : '#75715E',
-      \  red :    '#ff5f59',
-      \  orange : '#cc853d',
-      \  yellow : '#ccad52',
+      \  red :    '#fb4934',
+      \  orange : '#fe8019',
+      \  yellow : '#fabd2f',
       \  green :  '#9eb336',
       \  cyan :   '#52bccc',
-      \  blue :   '#5c95e6',
-      \  purple : '#9884c4',
-      \  teal :   '#47b38f',
+      \  blue :   '#83a598',
+      \  purple : '#fb4934',
+      \  teal :   '#b8bb26',
       \  none:    'NONE',
       \}
 
@@ -55,7 +56,7 @@ exe 'hi Normal' . s:fg_fg . s:bg_bg
 "signcolumn
 exe 'hi SignColumn' . s:bg_bg
 "buffer
-hi LineNr guifg=#272d40
+hi LineNr guifg=#928374
 exe 'hi EndOfBuffer'. s:fg_bg . s:bg_none
 exe 'hi Search'. s:fg_yellow . 'gui=reverse'
 exe 'hi Visual' s:bg_bg_alt
@@ -66,7 +67,7 @@ exe 'hi VertSplit' . s:fg_bg_alt
 exe 'hi Title' . s:fg_orange .'gui=bold'
 "cursorline
 exe 'hi Cursorline' .s:bg_bg_dim
-exe 'hi CursorLineNr' . s:fg_fg
+exe 'hi CursorLineNr' . s:fg_yellow
 "pmenu
 exe 'hi Pmenu ' . s:bg_bg_float .s:fg_fg_dim
 exe 'hi PmenuSel guibg=#222038 ' . s:fg_teal
@@ -77,8 +78,8 @@ hi! link PmenuExtra Pmenu
 hi! link PmenuExtraSel PmenuSel
 hi! link WildMenu Pmenu
 "statusline
-exe 'hi StatusLine' .s:fg_fg_dim . s:bg_bg_float. ' gui=bold cterm=none'
-exe 'hi StatusLineNC' . s:fg_fg_dim .s:bg_bg_float
+exe 'hi StatusLine' .s:fg_fg_dim . s:bg_bg_alt2. ' cterm=none'
+exe 'hi StatusLineNC' . s:fg_fg_dim .s:bg_bg_dim
 exe 'hi WinBar' .s:bg_none
 exe 'hi WinBarNC' . s:bg_none
 exe 'hi WinSeparator' . s:bg_bg . s:fg_bg_dim
@@ -183,7 +184,7 @@ hi! link Boolean Constant
 "
 hi! link Define PreProc
 exe 'hi Operator' . s:fg_fg_dim
-hi Comment guifg=#3d4966
+hi Comment guifg=#928374
 "------------------------------------------------------
 "-@punctuation
 exe 'hi @punctuation.bracket' . s:fg_fg_dim
@@ -204,7 +205,7 @@ hi! link  @tag.delimiter.typescript @tag.delimiter.html
 exe 'hi @text.reference.markdown_inline' . s:fg_blue
 "-@Diff
 exe 'hi DiffAdd' . s:fg_teal  . ' guibg=NONE'
-exe 'hi DiffChange' . s:fg_blue
+exe 'hi DiffChange' . s:fg_blue . ' guibg=NONE'
 exe 'hi DiffDelete' . s:fg_orange
 exe 'hi DiffText' . s:fg_orange
 hi! link @text.diff.add.diff DiffAdd
@@ -225,46 +226,46 @@ exe 'hi DiagnosticUnderlineWarn' .  ' gui=undercurl  guisp=' . s:p["yellow"]
 exe 'hi DiagnosticUnderlineInfo' .  ' gui=undercurl  guisp=' . s:p["blue"]
 exe 'hi DiagnosticUnderlineHint' .  ' gui=undercurl  guisp=' . s:p["cyan"]
 "-@plugin
-exe 'hi GitGutterAdd' . s:fg_teal
-exe 'hi GitGutterChange' . s:fg_blue
-exe 'hi GitGutterDelete' . s:fg_red
-exe 'hi GitGutterChangeDelete' . s:fg_red
+" exe 'hi GitGutterAdd' . s:fg_teal
+" exe 'hi GitGutterChange' . s:fg_blue
+" exe 'hi GitGutterDelete' . s:fg_red
+" exe 'hi GitGutterChangeDelete' . s:fg_red
 "dashboard
-exe 'hi DashboardHeader' . s:fg_green
-hi! link DashboardFooter Comment
-exe 'hi DashboardProjectTitle' . s:fg_yellow .' gui=bold'
-exe 'hi DashboardProjectTitleIcon' . s:fg_purple
-exe 'hi DashboardProjectIcon' . s:fg_blue
-hi! link  DashboardMruTitle DashboardProjectTitle
-hi! link  DashboardMruIcon DashboardProjectTitleIcon
-exe 'hi DashboardFiles' . s:fg_fg_alt
-hi! link DashboardShortCut Comment
-hi! link DashboardShortCutIcon @field
+" exe 'hi DashboardHeader' . s:fg_green
+" hi! link DashboardFooter Comment
+" exe 'hi DashboardProjectTitle' . s:fg_yellow .' gui=bold'
+" exe 'hi DashboardProjectTitleIcon' . s:fg_purple
+" exe 'hi DashboardProjectIcon' . s:fg_blue
+" hi! link  DashboardMruTitle DashboardProjectTitle
+" hi! link  DashboardMruIcon DashboardProjectTitleIcon
+" exe 'hi DashboardFiles' . s:fg_fg_alt
+" hi! link DashboardShortCut Comment
+" hi! link DashboardShortCutIcon @field
 "Telescope
-exe 'hi TelescopePromptBorder' .s:bg_bg_alt . s:fg_bg_alt
-exe 'hi TelescopePromptNormal' .s:bg_bg_alt . s:fg_orange
-exe 'hi TelescopeResultsBorder' .s:bg_bg_alt . s:fg_bg_alt
-exe 'hi TelescopePreviewBorder' .s:bg_bg_alt . s:fg_bg_alt
-exe 'hi TelescopeResultsNormal' . s:fg_fg
-exe 'hi TelescopeSelectionCaret' . s:fg_yellow
-exe 'hi TelescopeMatching' . s:fg_yellow
+" exe 'hi TelescopePromptBorder' .s:bg_bg_alt . s:fg_bg_alt
+" exe 'hi TelescopePromptNormal' .s:bg_bg_alt . s:fg_orange
+" exe 'hi TelescopeResultsBorder' .s:bg_bg_alt . s:fg_bg_alt
+" exe 'hi TelescopePreviewBorder' .s:bg_bg_alt . s:fg_bg_alt
+" exe 'hi TelescopeResultsNormal' . s:fg_fg
+" exe 'hi TelescopeSelectionCaret' . s:fg_yellow
+" exe 'hi TelescopeMatching' . s:fg_yellow
 "CursorWord
-exe 'hi CursorWord' .s:bg_bg_alt
-exe 'hi IndentLine' .s:fg_bg_alt
+" exe 'hi CursorWord' .s:bg_bg_alt
+" exe 'hi IndentLine' .s:fg_bg_alt
 "Lspsaga
-exe 'hi SagaVariable' . s:fg_green
+" exe 'hi SagaVariable' . s:fg_green
 "Rapid
-exe 'hi RapidFinished' .s:fg_red . ' gui=bold'
-exe 'hi RapidTake' .s:fg_purple . ' gui=bold'
-exe 'hi RapidDate' .s:fg_purple . ' gui=bold'
-exe 'hi RapidFile' . s:fg_blue . ' gui=bold'
-exe 'hi RapidTargetPos' . s:fg_teal . ' gui=bold'
+" exe 'hi RapidFinished' .s:fg_red . ' gui=bold'
+" exe 'hi RapidTake' .s:fg_purple . ' gui=bold'
+" exe 'hi RapidDate' .s:fg_purple . ' gui=bold'
+" exe 'hi RapidFile' . s:fg_blue . ' gui=bold'
+" exe 'hi RapidTargetPos' . s:fg_teal . ' gui=bold'
 
 "lsp relate
-exe 'hi LspSignatureActiveParameter' . s:fg_yellow . ' gui=underline'
+" exe 'hi LspSignatureActiveParameter' . s:fg_yellow . ' gui=underline'
 
 "netrw
-hi! link netrwTreeBar Comment
+" hi! link netrwTreeBar Comment
 
 "My changes
 exe 'hi TabLine' . s:bg_bg_dim . s:fg_fg_alt
@@ -272,4 +273,4 @@ exe 'hi TabLineSel' . ' cterm=underline gui=underline ' . s:bg_bg_alt
 hi! link MiniTablineModifiedCurrent TabLineSel
 "exe 'hi MiniTablineModifiedCurrent' . s:fg_yellow . ' cterm=underline gui=underline ' . s:bg_bg_alt
 exe 'hi MiniTablineModifiedHidden' . s:bg_bg_dim . s:fg_yellow
-exe 'hi MiniCursorword guifg=NONE guibg=#242831 gui=NONE cterm=NONE'
+exe 'hi MiniCursorword guifg=NONE gui=NONE cterm=NONE' . s:bg_bg_dim
