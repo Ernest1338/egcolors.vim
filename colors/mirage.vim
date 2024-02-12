@@ -77,8 +77,8 @@ hi! link PmenuExtra Pmenu
 hi! link PmenuExtraSel PmenuSel
 hi! link WildMenu Pmenu
 "statusline
-exe 'hi StatusLine' .s:fg_fg_dim . s:bg_bg_float. ' gui=bold cterm=none'
-exe 'hi StatusLineNC' . s:fg_fg_dim .s:bg_bg_float
+exe 'hi StatusLine' .s:fg_fg_dim . s:bg_bg_alt . ' cterm=none'
+exe 'hi StatusLineNC' . s:fg_fg_dim . s:bg_bg_float
 exe 'hi WinBar' .s:bg_none
 exe 'hi WinBarNC' . s:bg_none
 exe 'hi WinSeparator' . s:bg_bg . s:fg_bg_dim
@@ -86,7 +86,7 @@ exe 'hi WinSeparator' . s:bg_bg . s:fg_bg_dim
 exe 'hi Error' . s:fg_red . 'gui=bold guibg=NONE'
 hi! link ErrorMsg Error
 "Markup
-exe 'hi TODO' . s:fg_cyan
+exe 'hi TODO' . s:bg_cyan . s:fg_bg
 exe 'hi Conceal' . s:fg_blue .. ' guibg=NONE'
 hi! link  NonText Comment
 "Float
