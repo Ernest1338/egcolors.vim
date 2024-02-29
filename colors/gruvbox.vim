@@ -23,9 +23,9 @@ let s:p = #{
       \  orange : '#fe8019',
       \  yellow : '#fabd2f',
       \  green :  '#9eb336',
-      \  cyan :   '#52bccc',
+      \  cyan :   '#83a598',
       \  blue :   '#83a598',
-      \  purple : '#fb4934',
+      \  purple : '#d3869b',
       \  teal :   '#b8bb26',
       \  none:    'NONE',
       \}
@@ -120,7 +120,7 @@ exe 'hi @variable.builtin' . s:fg_purple
 "exe 'hi @variable.paramter' . s:fg_fg
 " link to field
 exe 'hi @variable.member' . s:fg_cyan
-exe 'hi Constant' . s:fg_orange
+exe 'hi Constant' . s:fg_purple
 hi! link @constant.builtin   Constant
 " constants defined by the preprocessor
 hi! link @constant.macro Constant
@@ -130,7 +130,7 @@ exe 'hi @namespace' . s:fg_cyan
 " ['@symbol'] = exe},
 "------------------------------------------------------
 "-@Keywords
-exe 'hi Keyword' . s:fg_green
+exe 'hi Keyword' . s:fg_red
 hi! link  @keyword.function Keyword
 hi! link  @keyword.return   Keyword
 hi! link  @keyword.operator Operator
