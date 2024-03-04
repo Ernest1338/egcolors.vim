@@ -87,7 +87,7 @@ exe 'hi WinSeparator' . s:bg_bg . s:fg_bg_dim
 exe 'hi Error' . s:fg_red . 'gui=bold guibg=NONE'
 hi! link ErrorMsg Error
 "Markup
-exe 'hi TODO' . s:bg_cyan . s:fg_bg
+" exe 'hi TODO' . s:bg_cyan . s:fg_bg
 exe 'hi Conceal' . s:fg_blue .. ' guibg=NONE'
 hi! link  NonText Comment
 "Float
