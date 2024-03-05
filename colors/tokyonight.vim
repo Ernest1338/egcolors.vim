@@ -1,4 +1,4 @@
-" Name:       gruvbox.vim
+" Name:       tokyonight.vim
 " Version:    0.1.0
 " Maintainer: Ernest1338 <https://github.com/Ernest1338>
 " License:    The MIT License (MIT)
@@ -6,27 +6,26 @@
 " A minimal colour scheme for Vim and Neovim
 hi clear
 
-let g:colors_name = 'gruvbox'
+let g:colors_name = 'tokyonight'
 set background=dark
 let s:background = &background
 
 let s:p = #{
-      \  bg : '#282828',
-      \  bg_float: '#282828',
-      \  bg_dim : '#3c3836',
-      \  bg_alt : '#3c3836',
-      \  bg_alt2: '#504945',
-      \  fg :     '#ebdbb2',
-      \  fg_dim : '#ebdbb2',
-      \  fg_alt : '#75715E',
-      \  red :    '#fb4934',
-      \  orange : '#fe8019',
-      \  yellow : '#fabd2f',
-      \  green :  '#9eb336',
-      \  cyan :   '#83a598',
-      \  blue :   '#83a598',
-      \  purple : '#d3869b',
-      \  teal :   '#b8bb26',
+      \  bg : '#1a1b26',
+      \  bg_float: '#16161e',
+      \  bg_dim : '#292e42',
+      \  bg_alt : '#283457',
+      \  fg :     '#c0caf5',
+      \  fg_dim : '#a9b1d6',
+      \  fg_alt : '#3b4261',
+      \  red :    '#f7768e',
+      \  orange : '#ff9e64',
+      \  yellow : '#e0af68',
+      \  green :  '#9ece6a',
+      \  cyan :   '#7dcfff',
+      \  blue :   '#7aa2f7',
+      \  purple : '#9d7cd8',
+      \  teal :   '#1abc9c',
       \  none:    'NONE',
       \}
 
@@ -56,18 +55,18 @@ exe 'hi Normal' . s:fg_fg . s:bg_bg
 "signcolumn
 exe 'hi SignColumn' . s:bg_bg
 "buffer
-hi LineNr guifg=#928374
+hi LineNr guifg=#272d40
 exe 'hi EndOfBuffer'. s:fg_bg . s:bg_none
 exe 'hi Search'. s:fg_yellow . 'gui=reverse'
 exe 'hi Visual' s:bg_bg_alt
-exe 'hi ColorColumn'. s:bg_bg_alt
+hi ColorColumn guibg=#15161e
 exe 'hi Whitespace'. s:fg_bg_alt
 "window
 exe 'hi VertSplit' . s:fg_bg_alt
 exe 'hi Title' . s:fg_orange .'gui=bold'
 "cursorline
 exe 'hi Cursorline' .s:bg_bg_dim
-exe 'hi CursorLineNr' . s:fg_yellow
+exe 'hi CursorLineNr' . s:fg_fg
 "pmenu
 exe 'hi Pmenu ' . s:bg_bg_float .s:fg_fg_dim
 exe 'hi PmenuSel guibg=#222038 ' . s:fg_teal
@@ -78,8 +77,8 @@ hi! link PmenuExtra Pmenu
 hi! link PmenuExtraSel PmenuSel
 hi! link WildMenu Pmenu
 "statusline
-exe 'hi StatusLine' .s:fg_fg_dim . s:bg_bg_alt2 . ' cterm=none'
-exe 'hi StatusLineNC' . s:fg_fg_dim . s:bg_bg_dim
+exe 'hi StatusLine' .s:fg_fg_dim . s:bg_bg_alt . ' cterm=none'
+exe 'hi StatusLineNC' . s:fg_fg_dim . s:bg_bg_float
 exe 'hi WinBar' .s:bg_none
 exe 'hi WinBarNC' . s:bg_none
 exe 'hi WinSeparator' . s:bg_bg . s:fg_bg_dim
@@ -120,7 +119,7 @@ exe 'hi @variable.builtin' . s:fg_purple
 "exe 'hi @variable.paramter' . s:fg_fg
 " link to field
 exe 'hi @variable.member' . s:fg_cyan
-exe 'hi Constant' . s:fg_purple
+exe 'hi Constant' . s:fg_orange
 hi! link @constant.builtin   Constant
 " constants defined by the preprocessor
 hi! link @constant.macro Constant
@@ -130,7 +129,7 @@ exe 'hi @namespace' . s:fg_cyan
 " ['@symbol'] = exe},
 "------------------------------------------------------
 "-@Keywords
-exe 'hi Keyword' . s:fg_red
+exe 'hi Keyword' . s:fg_green
 hi! link  @keyword.function Keyword
 hi! link  @keyword.return   Keyword
 hi! link  @keyword.operator Operator
@@ -184,7 +183,7 @@ hi! link Boolean Constant
 "
 hi! link Define PreProc
 exe 'hi Operator' . s:fg_fg_dim
-hi Comment guifg=#928374
+hi Comment guifg=#3d4966
 "------------------------------------------------------
 "-@punctuation
 exe 'hi @punctuation.bracket' . s:fg_fg_dim
@@ -204,7 +203,7 @@ hi! link  @tag.delimiter.typescript @tag.delimiter.html
 "-@Markdown
 exe 'hi @text.reference.markdown_inline' . s:fg_blue
 "-@Diff
-exe 'hi DiffAdd' . s:fg_teal  . ' guibg=NONE'
+exe 'hi DiffAdd' . s:fg_teal . ' guibg=NONE'
 exe 'hi DiffChange' . s:fg_blue . ' guibg=NONE'
 exe 'hi DiffDelete' . s:fg_red . ' guibg=NONE'
 exe 'hi DiffText' . s:fg_orange . ' guibg=NONE'
@@ -227,7 +226,7 @@ exe 'hi DiagnosticUnderlineInfo' .  ' gui=undercurl  guisp=' . s:p["blue"]
 exe 'hi DiagnosticUnderlineHint' .  ' gui=undercurl  guisp=' . s:p["cyan"]
 
 "My changes
-exe 'hi TabLine' . s:bg_bg_dim . s:fg_fg_alt
+exe 'hi TabLine' . s:bg_bg_float . s:fg_fg_alt
 exe 'hi TabLineSel' . ' cterm=underline gui=underline ' . s:bg_bg_alt
 hi! link MiniTablineModifiedCurrent TabLineSel
 "exe 'hi MiniTablineModifiedCurrent' . s:fg_yellow . ' cterm=underline gui=underline ' . s:bg_bg_alt
