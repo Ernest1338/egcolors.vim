@@ -232,6 +232,11 @@ hi! link MiniTablineModifiedCurrent TabLineSel
 "exe 'hi MiniTablineModifiedCurrent' . s:fg_yellow . ' cterm=underline gui=underline ' . s:bg_bg_alt
 exe 'hi MiniTablineModifiedHidden' . s:bg_bg_dim . s:fg_yellow
 exe 'hi MiniCursorword guifg=NONE gui=NONE cterm=NONE' . s:bg_bg_dim
+
 hi! link MiniDiffSignAdd DiffAdd
 hi! link MiniDiffSignChange DiffChange
 hi! link MiniDiffSignDelete DiffDelete
+hi! MiniDiffOverAdd guibg=#143821
+hi! MiniDiffOverDelete guibg=#341821
+hi! MiniDiffOverChange guibg=#141841
+hi! MiniDiffOverContext guibg=#141841

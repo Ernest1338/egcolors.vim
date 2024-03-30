@@ -56,7 +56,7 @@ exe 'hi Normal' . s:fg_fg . s:bg_bg
 "signcolumn
 exe 'hi SignColumn' . s:bg_bg
 "buffer
-hi LineNr guifg=#928374
+hi LineNr guifg=#504945
 exe 'hi EndOfBuffer'. s:fg_bg . s:bg_none
 exe 'hi Search'. s:fg_yellow . 'gui=reverse'
 exe 'hi Visual' s:bg_bg_alt
@@ -204,7 +204,7 @@ hi! link  @tag.delimiter.typescript @tag.delimiter.html
 "-@Markdown
 exe 'hi @text.reference.markdown_inline' . s:fg_blue
 "-@Diff
-exe 'hi DiffAdd' . s:fg_teal  . ' guibg=NONE'
+exe 'hi DiffAdd' . s:fg_teal . ' guibg=NONE'
 exe 'hi DiffChange' . s:fg_blue . ' guibg=NONE'
 exe 'hi DiffDelete' . s:fg_red . ' guibg=NONE'
 exe 'hi DiffText' . s:fg_orange . ' guibg=NONE'
@@ -233,6 +233,11 @@ hi! link MiniTablineModifiedCurrent TabLineSel
 "exe 'hi MiniTablineModifiedCurrent' . s:fg_yellow . ' cterm=underline gui=underline ' . s:bg_bg_alt
 exe 'hi MiniTablineModifiedHidden' . s:bg_bg_dim . s:fg_yellow
 exe 'hi MiniCursorword guifg=NONE gui=NONE cterm=NONE' . s:bg_bg_dim
+
 hi! link MiniDiffSignAdd DiffAdd
 hi! link MiniDiffSignChange DiffChange
 hi! link MiniDiffSignDelete DiffDelete
+hi! MiniDiffOverAdd guibg=#284828
+hi! MiniDiffOverDelete guibg=#482828
+hi! MiniDiffOverChange guibg=#282848
+hi! MiniDiffOverContext guibg=#282848
