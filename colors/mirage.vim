@@ -238,5 +238,5 @@ hi! link MiniDiffSignChange DiffChange
 hi! link MiniDiffSignDelete DiffDelete
 hi! MiniDiffOverAdd guibg=#143821
 hi! MiniDiffOverDelete guibg=#341821
-hi! MiniDiffOverChange guibg=#141841
+hi! MiniDiffOverChange guibg=#342821
 hi! MiniDiffOverContext guibg=#141841
