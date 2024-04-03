@@ -59,7 +59,7 @@ hi LineNr guifg=#272d40
 exe 'hi EndOfBuffer'. s:fg_bg . s:bg_none
 exe 'hi Search'. s:fg_yellow . 'gui=reverse'
 exe 'hi Visual' s:bg_bg_alt
-hi ColorColumn guibg=#15161e
+hi ColorColumn guibg=#272d40
 exe 'hi Whitespace'. s:fg_bg_alt
 "window
 exe 'hi VertSplit' . s:fg_bg_alt
