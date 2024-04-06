@@ -13,8 +13,8 @@ let s:background = &background
 let s:p = #{
       \  bg : '#1a1b26',
       \  bg_float: '#16161e',
-      \  bg_dim : '#292e42',
-      \  bg_alt : '#283457',
+      \  bg_dim : '#202233',
+      \  bg_alt : '#292e42',
       \  fg :     '#c0caf5',
       \  fg_dim : '#a9b1d6',
       \  fg_alt : '#3b4261',
@@ -59,7 +59,7 @@ hi LineNr guifg=#272d40
 exe 'hi EndOfBuffer'. s:fg_bg . s:bg_none
 exe 'hi Search'. s:fg_yellow . 'gui=reverse'
 exe 'hi Visual' s:bg_bg_alt
-hi ColorColumn guibg=#272d40
+exe 'hi ColorColumn'. s:bg_bg_alt
 exe 'hi Whitespace'. s:fg_bg_alt
 "window
 exe 'hi VertSplit' . s:fg_bg_alt

@@ -13,7 +13,7 @@ let s:background = &background
 let s:p = #{
       \  bg : '#282828',
       \  bg_float: '#282828',
-      \  bg_dim : '#3c3836',
+      \  bg_dim : '#353230',
       \  bg_alt : '#3c3836',
       \  bg_alt2: '#504945',
       \  fg :     '#ebdbb2',
