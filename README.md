@@ -43,4 +43,11 @@ exe 'hi RapidTargetPos' . s:fg_teal . ' gui=bold'
 exe 'hi LspSignatureActiveParameter' . s:fg_yellow . ' gui=underline'
 "netrw
 hi! link netrwTreeBar Comment
+
+exe 'hi TODO' . s:bg_cyan . s:fg_bg
+
+exe 'hi MiniTablineModifiedCurrent' . s:fg_yellow . ' cterm=underline gui=underline ' . s:bg_bg_alt
+
+" function paramter (not parameter?)
+exe 'hi @variable.paramter' . s:fg_fg
 ```

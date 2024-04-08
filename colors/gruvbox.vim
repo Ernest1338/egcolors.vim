@@ -87,7 +87,6 @@ exe 'hi WinSeparator' . s:bg_bg . s:fg_bg_dim
 exe 'hi Error' . s:fg_red . 'gui=bold guibg=NONE'
 hi! link ErrorMsg Error
 "Markup
-" exe 'hi TODO' . s:bg_cyan . s:fg_bg
 exe 'hi Conceal' . s:fg_blue .. ' guibg=NONE'
 hi! link  NonText Comment
 "Float
@@ -116,8 +115,6 @@ exe 'hi Identifier' . s:fg_blue
 exe 'hi @variable' . s:fg_fg
 " built-in variable names (e.g. `this`)
 exe 'hi @variable.builtin' . s:fg_purple
-" function paramter (not parameter?)
-"exe 'hi @variable.paramter' . s:fg_fg
 " link to field
 exe 'hi @variable.member' . s:fg_cyan
 exe 'hi Constant' . s:fg_purple
@@ -230,7 +227,6 @@ exe 'hi DiagnosticUnderlineHint' .  ' gui=undercurl  guisp=' . s:p["cyan"]
 exe 'hi TabLine' . s:bg_bg_dim . s:fg_fg_alt
 exe 'hi TabLineSel' . ' cterm=underline gui=underline ' . s:bg_bg_alt
 hi! link MiniTablineModifiedCurrent TabLineSel
-"exe 'hi MiniTablineModifiedCurrent' . s:fg_yellow . ' cterm=underline gui=underline ' . s:bg_bg_alt
 exe 'hi MiniTablineModifiedHidden' . s:bg_bg_dim . s:fg_yellow
 exe 'hi MiniCursorword guifg=NONE gui=NONE cterm=NONE' . s:bg_bg_dim
 
