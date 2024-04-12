@@ -56,6 +56,7 @@ exe 'hi Normal' . s:fg_fg . s:bg_bg
 exe 'hi SignColumn' . s:bg_bg
 "buffer
 hi LineNr guifg=#272d40
+hi! link  IndentLine LineNr
 exe 'hi EndOfBuffer'. s:fg_bg . s:bg_none
 exe 'hi Search'. s:fg_yellow . 'gui=reverse'
 exe 'hi Visual' s:bg_bg_alt
