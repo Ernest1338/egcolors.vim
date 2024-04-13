@@ -133,9 +133,11 @@ hi! link  @keyword.return   Keyword
 hi! link  @keyword.operator Operator
 hi! link  @keyword.import   PreProc
 "if else
-hi! link Conditional Keyword
+exe 'hi Conditional' . s:fg_yellow
+hi! link  @keyword.conditional   Conditional
 "for while
 hi! link Repeat Conditional
+hi! link  @keyword.repeat   Repeat
 "for attribute
 hi! link @attribute Keyword
 
