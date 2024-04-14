@@ -113,7 +113,7 @@ exe 'hi Directory' . s:fg_blue
 "-@Identifier
 exe 'hi Identifier' . s:fg_blue
 " various variable names
-exe 'hi @variable' . s:fg_fg
+exe 'hi @variable' . s:fg_blue
 " built-in variable names (e.g. `this`)
 exe 'hi @variable.builtin' . s:fg_purple
 " link to field
@@ -166,9 +166,9 @@ hi! link @property @field
 "-@Functions
 exe 'hi Function' . s:fg_blue
 "built-in functions
-hi! link  @function.builtin Function
+exe 'hi @function.builtin' . s:fg_orange
 "function calls
-hi! link @function.call Function
+exe 'hi @function.call' . s:fg_green
 "preprocessor macros
 hi! link @function.macro Function
 hi! link @method Function
@@ -187,8 +187,8 @@ exe 'hi Operator' . s:fg_fg_dim
 hi Comment guifg=#928374
 "------------------------------------------------------
 "-@punctuation
-exe 'hi @punctuation.bracket' . s:fg_fg_dim
-exe 'hi @punctuation.delimiter' . s:fg_fg_dim
+exe 'hi @punctuation.bracket' . s:fg_orange
+exe 'hi @punctuation.delimiter' . s:fg_orange
 "------------------------------------------------------
 "-@Tag
 exe 'hi @tag.html' . s:fg_orange
