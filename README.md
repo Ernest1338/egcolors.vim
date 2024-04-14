@@ -2,6 +2,9 @@
 
 Fork of https://github.com/nvimdev/nightsky.vim
 
+Things:
+cmp highlights could be improved
+
 Commented out highlights:
 ```vim
 "-@plugin

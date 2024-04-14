@@ -213,10 +213,11 @@ hi! link @text.diff.delete.diff DiffDelete
 hi! link @text.diff.change.diff DiffChange
 "------------------------------------------------------
 "-@Diagnostic
-exe 'hi DiagnosticError'. s:fg_red
-exe 'hi DiagnosticWarn' . s:fg_yellow
-exe 'hi DiagnosticInfo' . s:fg_blue
-exe 'hi DiagnosticHint' . s:fg_cyan
+"based on bg: '#282828'
+exe 'hi DiagnosticError'. s:fg_red . ' guibg=#382828'
+exe 'hi DiagnosticWarn' . s:fg_yellow . ' guibg=#383828'
+exe 'hi DiagnosticInfo' . s:fg_blue . ' guibg=#282838'
+exe 'hi DiagnosticHint' . s:fg_cyan . ' guibg=#283838'
 hi! link  DiagnosticSignError DiagnosticError
 hi! link  DiagnosticSignWarn DiagnosticWarn
 hi! link  DiagnosticSignInfo DiagnosticInfo

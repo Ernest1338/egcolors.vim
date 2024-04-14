@@ -13,13 +13,13 @@ let s:background = &background
 let s:p = #{
       \  bg : '#1f1f28',
       \  bg_float: '#16161d',
-          \  bg_dim : '#202233',
-          \  bg_alt : '#292e42',
+      \  bg_dim : '#202233',
+      \  bg_alt : '#292e42',
       \  fg :     '#dcd7ba',
-          \  fg_dim : '#a9b1d6',
-          \  fg_alt : '#3b4261',
+      \  fg_dim : '#a9b1d6',
+      \  fg_alt : '#3b4261',
       \  red :    '#e46876',
-          \  orange : '#ff9e64',
+      \  orange : '#ff9e64',
       \  yellow : '#e6c384',
       \  green :  '#98bb6c',
       \  cyan :   '#7aa89f',
@@ -213,10 +213,11 @@ hi! link @text.diff.delete.diff DiffDelete
 hi! link @text.diff.change.diff DiffChange
 "------------------------------------------------------
 "-@Diagnostic
-exe 'hi DiagnosticError'. s:fg_red
-exe 'hi DiagnosticWarn' . s:fg_yellow
-exe 'hi DiagnosticInfo' . s:fg_blue
-exe 'hi DiagnosticHint' . s:fg_cyan
+"based on bg: '#1f1f28'
+exe 'hi DiagnosticError'. s:fg_red . ' guibg=#2f1f28'
+exe 'hi DiagnosticWarn' . s:fg_yellow . ' guibg=#2f2f28'
+exe 'hi DiagnosticInfo' . s:fg_blue . ' guibg=#1f1f38'
+exe 'hi DiagnosticHint' . s:fg_cyan . ' guibg=#1f2f38'
 hi! link  DiagnosticSignError DiagnosticError
 hi! link  DiagnosticSignWarn DiagnosticWarn
 hi! link  DiagnosticSignInfo DiagnosticInfo
