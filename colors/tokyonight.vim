@@ -184,7 +184,7 @@ hi! link Float Number
 hi! link Boolean Constant
 "
 hi! link Define PreProc
-exe 'hi Operator' . s:fg_fg_dim
+exe 'hi Operator' . s:fg_cyan
 hi Comment guifg=#3d4966
 "------------------------------------------------------
 "-@punctuation
