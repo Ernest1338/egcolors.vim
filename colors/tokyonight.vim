@@ -23,6 +23,7 @@ let s:p = #{
       \  yellow : '#e0af68',
       \  green :  '#9ece6a',
       \  cyan :   '#7dcfff',
+      \  cyan2 :  '#73daca',
       \  blue :   '#7aa2f7',
       \  purple : '#9d7cd8',
       \  teal :   '#4fd6be',
@@ -114,7 +115,7 @@ exe 'hi Identifier' . s:fg_blue
 " various variable names
 exe 'hi @variable' . s:fg_fg
 " built-in variable names (e.g. `this`)
-exe 'hi @variable.builtin' . s:fg_purple
+exe 'hi @variable.builtin' . s:fg_red
 " link to field
 exe 'hi @variable.member' . s:fg_cyan
 exe 'hi Constant' . s:fg_orange
@@ -122,12 +123,13 @@ hi! link @constant.builtin   Constant
 " constants defined by the preprocessor
 hi! link @constant.macro Constant
 "modules or namespaces
+exe 'hi @module' . s:fg_cyan
 exe 'hi @namespace' . s:fg_cyan
 "symbols or atoms
 " ['@symbol'] = exe},
 "------------------------------------------------------
 "-@Keywords
-exe 'hi Keyword' . s:fg_green
+exe 'hi Keyword' . s:fg_purple
 hi! link  @keyword.function Keyword
 hi! link  @keyword.return   Keyword
 hi! link  @keyword.operator Operator
@@ -159,7 +161,7 @@ hi! link @type.definition Type
 hi! link @type.qualifier KeyWord
 "modifiers that affect storage in memory or life-time like C `static`
 hi! link @storageclass Keyword
-exe 'hi @field' . s:fg_cyan
+exe 'hi @field' . s:fg_cyan2
 hi! link @property @field
 "------------------------------------------------------
 "-@Functions
@@ -176,7 +178,7 @@ hi! link @method.call Function
 hi! link @parameter @variable
 "------------------------------------------------------
 "-@Literals
-exe 'hi String' . s:fg_teal
+exe 'hi String' . s:fg_green
 exe 'hi Number' . s:fg_purple
 hi! link Float Number
 hi! link Boolean Constant
