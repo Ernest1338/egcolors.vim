@@ -10,9 +10,10 @@ let g:colors_name = 'tokyonight'
 set background=dark
 let s:background = &background
 
+"previous bg_float: #16161e
 let s:p = #{
       \  bg : '#1a1b26',
-      \  bg_float: '#16161e',
+      \  bg_float: '#1a1b26',
       \  bg_dim : '#202233',
       \  bg_alt : '#292e42',
       \  fg :     '#c0caf5',
