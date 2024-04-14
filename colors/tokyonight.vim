@@ -205,7 +205,7 @@ hi! link  @tag.delimiter.typescript @tag.delimiter.html
 "-@Markdown
 exe 'hi @text.reference.markdown_inline' . s:fg_blue
 "-@Diff
-exe 'hi DiffAdd' . s:fg_teal . ' guibg=NONE'
+exe 'hi DiffAdd' . s:fg_green . ' guibg=NONE'
 exe 'hi DiffChange' . s:fg_blue . ' guibg=NONE'
 exe 'hi DiffDelete' . s:fg_red . ' guibg=NONE'
 exe 'hi DiffText' . s:fg_orange . ' guibg=NONE'
