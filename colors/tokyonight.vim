@@ -235,6 +235,7 @@ exe 'hi MiniCursorword guifg=NONE gui=NONE cterm=NONE' . s:bg_bg_dim
 hi! link MiniDiffSignAdd DiffAdd
 hi! link MiniDiffSignChange DiffChange
 hi! link MiniDiffSignDelete DiffDelete
+"colors from "bg" but altered
 hi! MiniDiffOverAdd guibg=#1a3b26
 hi! MiniDiffOverDelete guibg=#3a1b26
 hi! MiniDiffOverChange guibg=#3a2b26
