@@ -131,7 +131,7 @@ exe 'hi @namespace' . s:fg_cyan
 "------------------------------------------------------
 "-@Keywords
 exe 'hi Keyword' . s:fg_purple
-exe 'hi @keyword.function' . s:fg_yellow
+hi! link  @keyword.function Keyword
 hi! link  @keyword.return   Keyword
 hi! link  @keyword.operator Operator
 hi! link  @keyword.import   PreProc
