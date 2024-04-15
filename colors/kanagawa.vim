@@ -10,9 +10,10 @@ let g:colors_name = 'kanagawa'
 set background=dark
 let s:background = &background
 
+"previous bg_float: #16161d
 let s:p = #{
       \  bg : '#1f1f28',
-      \  bg_float: '#16161d',
+      \  bg_float: '#1f1f28',
       \  bg_dim : '#202233',
       \  bg_alt : '#292e42',
       \  fg :     '#dcd7ba',

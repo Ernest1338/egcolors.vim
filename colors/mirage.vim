@@ -10,9 +10,10 @@ let g:colors_name = 'mirage'
 set background=dark
 let s:background = &background
 
+"previous bg_float: #14131f
 let s:p = #{
       \  bg : '#141821',
-      \  bg_float: '#14131f',
+      \  bg_float: '#141821',
       \  bg_dim : '#1c202e',
       \  bg_alt : '#222738',
       \  fg :     '#cccccc',

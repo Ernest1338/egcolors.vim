@@ -10,6 +10,7 @@ let g:colors_name = 'gruvbox'
 set background=dark
 let s:background = &background
 
+"previous bg_float: ???
 let s:p = #{
       \  bg : '#282828',
       \  bg_float: '#282828',

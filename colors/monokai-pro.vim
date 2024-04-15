@@ -10,9 +10,10 @@ let g:colors_name = 'monokai-pro'
 set background=dark
 let s:background = &background
 
+"previous bg_float: #221f22
 let s:p = #{
       \  bg : '#2d2a2e',
-      \  bg_float: '#221f22',
+      \  bg_float: '#2d2a2e',
       \  bg_dim : '#373438',
       \  bg_alt : '#434043',
       \  fg :     '#fcfcfa',
