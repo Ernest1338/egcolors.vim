@@ -215,8 +215,10 @@ hi! link @text.diff.change.diff DiffChange
 "------------------------------------------------------
 "-@Diagnostic
 "based on bg: '#282828'
-exe 'hi DiagnosticError'. s:fg_red . ' guibg=#382828'
-exe 'hi DiagnosticWarn' . s:fg_yellow . ' guibg=#383828'
+" . ' guibg=#382828'
+exe 'hi DiagnosticError'. s:fg_red
+" . ' guibg=#383828'
+exe 'hi DiagnosticWarn' . s:fg_yellow
 exe 'hi DiagnosticInfo' . s:fg_blue
 exe 'hi DiagnosticHint' . s:fg_cyan
 hi! link  DiagnosticSignError DiagnosticError
